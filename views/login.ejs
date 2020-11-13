@@ -1,0 +1,70 @@
+<!-- 
+  
+/*
+
+  File name : login.ejs
+  Student name :Vishwa Akhani
+  StudentID :300913898
+  Date:29 October 2020
+
+*/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/header %>
+</head>
+
+<body id="page-top">
+  <!-- Navigation-->
+  <% include ./partials/navmenu %>
+
+  <section id="contact">
+    <div class="container">
+      
+      <h3 class="text-center text-uppercase  mt-5 mb-5">Login</h3>
+
+      <% if (message.length > 0) { %>
+      <div class="alert alert-warning alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Ohps!</strong> <%= message %>.
+      </div>
+      <% } %>
+      <div class="row">
+        <div class="col-lg mx-auto">
+          <form name="sentMessage" id="contactForm" action="/login" method="POST">
+            <div class="row ">
+              <div class="col-md-6 offset-md-3">
+                <div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">User name</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Password</label>
+                    <input class="form-control" id="password" name="password" type="password" placeholder="Password">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="form-group ">
+
+                  <button type="submit" class="anButton mt-5">Login<div></div>
+                    <i class="fas fa-sign-in-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

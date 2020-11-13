@@ -1,0 +1,11 @@
+
+#   File name : .gitignore
+#   Student name :Vishwa Akhani
+#   StudentID :300913898
+#   Date:29 October 2020
+
+*.log
+.vscode
+DS_Store
+node_modules
+.env

@@ -1,0 +1,72 @@
+{
+  "name": "akhani-portfolio",
+  "version": "0.1.0",
+  "description": "My Personal Porfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*.spec.js --exit",
+    "start": "node server.js",
+    "dev": "nodemon server"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+    },
+    "plugins": [
+      "react",
+      "jsx-a11y"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.17.1",
+    "gravatar": "^1.8.1",
+    "mailchimp-api-v3": "^1.13.0",
+    "mocha": "^6.1.4",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^2.7.0",
+    "lint-staged": "^8.2.1",
+    "nodemon": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+<!-- 
+    
+/*
+
+  File name : contactList.ejs
+  Student name :Vishwa Akhani
+  StudentID :300913898
+  Date:29 October 2020
+
+*/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/header %>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <% include ./partials/navmenu %>
+
+    <section id="contact ">
+        <div class="container">
+            <div class="error_container">
+                <h3 class="text-center text-uppercase  mt-5 mb-5">Contact List</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name (Alphabetically Sorted)</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% post.forEach(function(posts){ %>
+                        <tr>
+                            <th scope="row"><%= posts.name %></th>
+                            <td><%= posts.number %></td>
+                            <td><%= posts.email %></td>
+                            <td>
+                                <a href="/editcontact/<%=posts._id%>">
+                                    <i style="cursor: pointer; font-size: 25px;color: #4dde76 ;"
+                                        class="fas fa-edit"></i>
+                                </a>
+                            <td>
+                                <a href="/delete/<%= posts._id %>">
+                                    <i style="cursor: pointer; font-size: 25px;color: #4dde76 ;"
+                                        class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+
+                <a class="anButton mt-5" href="/businessList">Business List
+                    <div></div>
+                    <i class="fas fa-list"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
